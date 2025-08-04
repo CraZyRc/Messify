@@ -1,0 +1,88 @@
+############################################################
+# ^------------------------------------------------------^ #
+# |                       Notes                          | #
+# <------------------------------------------------------> #
+############################################################
+
+Version: ${project.version}
+
+# Welcome to the config file!
+# This file gives you control over most aspects of the plugin that aren't already controlled by the message file.
+# There aren't a lot of settings (but then again, this plugin is rather small)
+# Feel free to mess around! When encountering bugs, please Notify CraZy ()
+
+# Select the plugin language (Config will always be in english), you can select one of following languages: "en_US", "fr_FR", "es_ES", "nl_NL", "de_DE", "zh_TW", "tr_TR" and "ru_RU").
+# Shout-out to Kevin_H (https://www.spigotmc.org/members/kevin_h.1393842/) for the "zh_TW" translation, K-ReportBot (https://www.spigotmc.org/members/k-reportbot.1777793/) for the "ru_RU" and "de_DE" translation, WinTone01 (https://www.spigotmc.org/members/wintone01.1485313/) for "tr_TR" and Dami1603 for the "es_ES" translation
+# If you wish to contribute to the language translations (e.g. by making a translation for another language), then please visit https://github.com/CraZyRc/WhackaMole
+Language: en_US
+
+
+############################################################
+# ^------------------------------------------------------^ #
+# |                 Message settings                     | #
+# <------------------------------------------------------> #
+############################################################
+
+# Do you want the system to send messages in order per group or mixed per group? for example. you have three groups, Standard, Basic and VIP. both have 5 messages each.
+# Should all the messages of Standard be sent before sending a message from the Basic group and the same for VIP, or should the system alternate between Groups: 1 message from standard, the next from Basic, VIP and back to Standard
+# for the first option, write down LINEAR, otherwise write down ALTERNATE
+Message order: ALTERNATE
+
+# the plugin prefix, Note all messages do contain the prefix. To remove prefix, set to ""
+Prefix: "&e&l[&6&lMess&3&lify&e&l] &f>"
+
+# Should the plugin start broadcasting upon server start or be paused
+On startup: true
+
+# Time between messages sent (time in seconds)
+Interval: 60
+
+# Placeholders for symbols. Define as many as you want.
+# Predefined are:
+#   %online_players% - currently online players
+#   %max_players% - max server capacity
+#   %player_name% - receiving player's name
+#   %player_display% - receiving player's displayname
+#   %c% - Center the message (has to be at the beginning of the line or the sentence won't be properly aligned)
+#   %n - New Line (\n).
+
+Placeholders:
+  - ["<3", "❤"]
+  - ["[*]", "★"]
+  - ["[**]", "✹"]
+  - ["[p]", "●"]
+  - ["[v]", "✔"]
+  - ["[+]", "♦"]
+  - ["[++]", "✦"]
+  - ["[x]", "█"]
+  - ["[/]", "▌"]
+# these Placeholders are inspired by: https://dev.bukkit.org/projects/broadcaster-plugin
+
+
+############################################################
+# ^------------------------------------------------------^ #
+# |                  Permission Nodes                    | #
+# <------------------------------------------------------> #
+############################################################
+
+# These are the permissions used for the plugin.
+# This section of the config file is purely information, this part is not to be edited.
+# NOTE: Permission nodes inherit from the parent group. For example: the permission for Group Create would be: "messify.group.create"
+
+General:
+  messify.*: All the permissions
+
+Game Mechanics:
+  messify.{groupName}: Allows the player to receive broadcasts from that group, replace {groupName} for the actual group name (e.g. "messify.standard").
+
+Commands:
+  messify.raw: Allows the user to broadcast a message, can be written in Json and String `/messify raw <Message>`
+  messify.start: Allows the user to start the Broadcasting service `/messify start`
+  messify.stop: Allows the user to stop the Broadcasting service `/messify stop`
+  messify.reload: Allows the user to reload the plugin `/messify reload`
+
+  messify.group.*: All the group command permissions
+  messify.group.create: Allows the user to create a new group `/messify group create <groupName> <true/false>`
+  messify.group.add: Allows the user to add a message to a group `/messify group add <groupName> <message>`
+  messify.group.remove: Allows the user to remove a message from a group or remove the group entirely. Depending if the message is given as an argument `/messify group remove <groupName> {message}`
+  messify.group.list: Allows the user to see the list of groups or the list of messages in the group. Depending if the group is given as an argument `/messify group list {groupName}`

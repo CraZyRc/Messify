@@ -1,0 +1,37 @@
+############################################################
+# ^------------------------------------------------------^ #
+# |                       Messages                       | #
+# <------------------------------------------------------> #
+############################################################
+
+
+# do not change "Group:"
+
+# Groupname:
+#   Random: true/false
+#   Messages:
+#     - 'Example message'
+
+
+Group:
+  Standard:
+    Random: true
+    Messages:
+      - '&2Welcome to RcMessenger! &4<3<3<3 %n &6The new messenger! &2[v]'
+      - '&aSupports &9co&5lo&9rs &and &6placeholders&a! &8[/]&2[v]&8[/] Online: %online_players% Player(s)'
+      - '%c%&6&lCentered messages.'
+      - '&2Now also supporting &b&lPlaceholderAPI %n&r&2now: &rTPS &8=> &d%server_tps_1_colored%'
+      - '%!prefix%%c%&bMessify%n %c%&2------------------------%n%c%&eThe options
+      are endless!%n%c%------------------------&r%n%c%yourdisplay: %player_display%'
+  VIP:
+    Random: true
+    Messages:
+      - '["",{"text":"With JSON, you can create any ","color":"gold"},{"text":"m","color":"#FF0003"},{"text":"e","color":"#FF005E"},{"text":"s","color":"#F8008E"},{"text":"s","color":"#E900C7"},{"text":"a","color":"#F800E7"},{"text":"g","color":"#EE00F8"},{"text":"e","color":"#A400F8"},{"text":"
+      you like.","color":"gold"},{"text":"\nDon''t know how to use JSON? use this
+      link:\n           "},{"text":"[Click Me]","italic":true,"clickEvent":{"action":"open_url","value":"https://minecraft.tools/en/json_text.php"}},{"text":"
+      or "},{"text":"[Gradient!]","italic":true,"clickEvent":{"action":"open_url","value":"https://colorize.fun/en/minecraft"}}]'
+  VIP+:
+    Random: false
+    Messages:
+      - '%c%&4&lSpecial Message%n%c%&c------------------------%n%c%&cOnly visible for V.I.P.+'
+      - '["",{"text":"Click "},{"text":"Me","color":"aqua","clickEvent":{"action":"run_command","value":"minecraft:give @s minecraft:diamond 1"}},{"text":" to receive "},{"text":"a Diamond","color":"aqua"},{"text":"!"}]'

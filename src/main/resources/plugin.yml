@@ -1,0 +1,67 @@
+name: Messify
+version: '${project.version}'
+main: me.CraZy.messify.Main
+api-version: '1.21'
+prefix: Messify
+Authors: [ CraZy ]
+softdepend: [PlaceholderAPI]
+description: Messaging plugin
+website: https://github.com/CraZyRc
+
+permissions:
+  messify.*:
+    description: Gives the user full access to all the WAM permissions
+    default: op
+    children:
+      messify.raw: true
+      messify.start: true
+      messify.stop: true
+      messify.reload: true
+      messify.group.*: true
+      messify: true
+
+  messify.raw:
+    description: Allows the user to broadcast a message, can be written in Json and String `/messify raw <Message>`
+    default: op
+    children: {messify: true}
+  messify.start:
+    description: Allows the user to start the Broadcasting service `/messify start`
+    default: op
+    children: {messify: true}
+  messify.stop:
+    description: Allows the user to stop the Broadcasting service `/messify stop`
+    default: op
+    children: { messify: true }
+  messify.reload:
+    description: Allows the user to reload the plugin `/messify reload`
+    default: op
+    children: { messify: true }
+
+  messify.group: {description: Allowed the user access to the group commands `/messify group`, default: op, children: {messify: true}}
+
+  messify.group.*:
+    description: Gives the user full access to all the Group commands
+    default: op
+    children:
+      messify.group.create: true
+      messify.group.add: true
+      messify.group.remove: true
+      messify.group.list: true
+
+  messify.group.create:
+    description: Allows the user to create a new group `/messify group create <groupName> <true/false>`
+    default: op
+    children: {wam.group: true}
+  messify.group.add:
+    description: Allows the user to add a message to a group `/messify group add <groupName> <message>`
+    default: op
+    children: { wam.group: true }
+  messify.group.remove:
+    description: Allows the user to remove a message from a group or remove the group entirely. Depending if the message is given as an argument `/messify group remove <groupName> {message}`
+    default: op
+    children: { wam.group: true }
+  messify.group.list:
+    description: Allows the user to see the list of groups or the list of messages in the group. Depending if the group is given as an argument `/messify group list {groupName}`
+    default: op
+    children: { wam.group: true }
+
