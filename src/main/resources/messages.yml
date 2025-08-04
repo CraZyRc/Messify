@@ -19,10 +19,9 @@ Group:
     Messages:
       - '&2Welcome to RcMessenger! &4<3<3<3 %n &6The new messenger! &2[v]'
       - '&aSupports &9co&5lo&9rs &and &6placeholders&a! &8[/]&2[v]&8[/] Online: %online_players% Player(s)'
-      - '%c%&6&lCentered messages.'
+      - '%c%&6&lCentered messages'
       - '&2Now also supporting &b&lPlaceholderAPI %n&r&2now: &rTPS &8=> &d%server_tps_1_colored%'
-      - '%!prefix%%c%&bMessify%n %c%&2------------------------%n%c%&eThe options
-      are endless!%n%c%------------------------&r%n%c%yourdisplay: %player_display%'
+      - '%!prefix%%c%&bMessify%n %c%&2------------------------%n%c%&eThe options are endless!%n%c%------------------------&r%n%c%yourdisplay: %player_display%'
   VIP:
     Random: true
     Messages:

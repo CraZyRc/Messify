@@ -9,6 +9,7 @@ import me.CraZy.messify.Commands.Arguments;
 import me.CraZy.messify.Commands.SubCommand;
 
 import me.CraZy.messify.Config;
+import me.CraZy.messify.Managers.Broadcast.BroadcastManager;
 import me.CraZy.messify.Managers.Groups.Group;
 import me.CraZy.messify.Utils.Translator;
 import org.jetbrains.annotations.Nullable;
@@ -51,6 +52,7 @@ public class GroupAddCMD extends SubCommand {
       }
 
       group.addMessage(message);
+      BroadcastManager.getInstance().updatePlayerGroups();
       sender.sendMessage(Config.AppConfig.PREFIX + Translator.COMMANDS_GROUP_ADD_SUCCESS.Format(group));
 
     });

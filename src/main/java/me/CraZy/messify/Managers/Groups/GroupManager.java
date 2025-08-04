@@ -6,7 +6,6 @@ import me.CraZy.messify.Utils.Translator;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class GroupManager {
   private static GroupManager Instance;
@@ -20,6 +19,7 @@ public class GroupManager {
   }
 
   public void loadGroups() {
+    this.Groups.clear();
     Logger.info(Translator.GROUPMANAGER_LOADING_GROUPS.Format());
     if (MessageManager.getGroupKeys().isEmpty()) {
       Logger.info(Translator.GROUPMANAGER_LOADING_NOGROUPSFOUND.Format());

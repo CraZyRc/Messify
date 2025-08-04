@@ -61,12 +61,14 @@ public class PlayerManager {
   }
 
   public void updatePlayerGroups() {
-    this.playerGroups = new ArrayList<>();
+    this.playerGroups.clear();
     for (Group group : GroupManager.getInstance().Groups) {
       if (group.Validated() && this.Player.hasPermission("messify." + group.getName().toLowerCase())) {
         this.playerGroups.add(group);
       }
     }
+    this.canCast = !playerGroups.isEmpty();
+
   }
 
   public List<Group> getPlayerGroups() {

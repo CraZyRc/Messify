@@ -5,8 +5,8 @@ import dev.jorel.commandapi.executors.CommandExecutor;
 import me.CraZy.messify.Commands.Arguments;
 import me.CraZy.messify.Commands.SubCommand;
 import me.CraZy.messify.Config;
+import me.CraZy.messify.Managers.Broadcast.BroadcastManager;
 import me.CraZy.messify.Managers.Groups.Group;
-import me.CraZy.messify.Managers.Groups.GroupManager;
 import me.CraZy.messify.Managers.Groups.Message;
 import me.CraZy.messify.Utils.Translator;
 import org.bukkit.entity.Player;
@@ -41,18 +41,17 @@ public class GroupRemoveMessageCMD extends SubCommand {
       var group = args.<Group>getUnchecked(0);
       var message = args.<Message>getUnchecked(1);
 
-        if (sender instanceof Player) {
-          Player player = ((Player) sender).getPlayer();
-          if (!HasCommandBeenConfirmed(player.getUniqueId().toString())) {
-            sender.sendMessage(Config.AppConfig.PREFIX + Translator.COMMANDS_GROUP_REMOVE_CONFIRM.Format(message.getMessage()));
-            return;
-          }
+      if (sender instanceof Player) {
+        Player player = ((Player) sender).getPlayer();
+        if (!HasCommandBeenConfirmed(player.getUniqueId().toString())) {
+          sender.sendMessage(Config.AppConfig.PREFIX + Translator.COMMANDS_GROUP_REMOVE_CONFIRM.Format(message.getMessage()));
+          return;
         }
+      }
+      group.removeMessage(message);
+      BroadcastManager.getInstance().updatePlayerGroups();
 
-        sender.sendMessage(Config.AppConfig.PREFIX + Translator.COMMANDS_GROUP_REMOVE_SUCCESS.Format(message.getMessage()));
-        group.removeMessage(message);
-
-
+      sender.sendMessage(Config.AppConfig.PREFIX + Translator.COMMANDS_GROUP_REMOVE_SUCCESS.Format(message.getMessage()));
 
     });
   }

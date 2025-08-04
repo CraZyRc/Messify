@@ -88,9 +88,9 @@ public class Config {
   }
 
   protected static boolean LoadConfig(YMLFile ConfigFile, Main main) {
-//    if (Updater.versionCompare(ConfigFile.getString("Config Version"), AppConfig.configVersion)) {
-//      Logger.warning(Translator.CONFIG_OLDVERSION.Format(ConfigFile.getString("Config Version")));
-//    }
+    if (Updater.versionCompare(ConfigFile.getString("Config Version"), AppConfig.configVersion)) {
+      Logger.warning(Translator.CONFIG_OLDVERSION.Format(ConfigFile.getString("Config Version")));
+    }
 
     if(!AppConfig.LoadConfig(ConfigFile) || !MessageConfig.LoadConfig(ConfigFile)) {
       return false;

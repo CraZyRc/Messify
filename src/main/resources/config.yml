@@ -4,7 +4,7 @@
 # <------------------------------------------------------> #
 ############################################################
 
-Version: ${project.version}
+Version: 1.0
 
 # Welcome to the config file!
 # This file gives you control over most aspects of the plugin that aren't already controlled by the message file.

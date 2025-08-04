@@ -43,7 +43,7 @@ public class GroupCreateCMD extends SubCommand {
   protected @Nullable CommandExecutor Executes() {
     return ((sender, args) -> {
       var groupName = args.<String>getUnchecked(0);
-      var groupRandom = args.<Boolean>getUnchecked(2);
+      var groupRandom = args.<Boolean>getUnchecked(1);
 
       if (groupName == null || groupRandom == null) {
         sender.sendMessage(Config.AppConfig.PREFIX + Translator.COMMANDS_GROUP_CREATE_ERROR.Format());

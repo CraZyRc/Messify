@@ -32,11 +32,9 @@ public enum Translator {
   ,   COMMANDS_GROUP_ADD_SUCCESS                          ("Commands.Group.Add.Success", Group.class)
   ,   COMMANDS_GROUP_CREATE                               ("Commands.Group.Create")
   ,   COMMANDS_GROUP_CREATE_GROUPNAME                     ("Commands.Group.Create.Groupname")
-  ,   COMMANDS_GROUP_CREATE_INTERVAL                      ("Commands.Group.Create.Interval")
   ,   COMMANDS_GROUP_CREATE_RANDOM                        ("Commands.Group.Create.Random")
   ,   COMMANDS_GROUP_CREATE_SUCCESS                       ("Commands.Group.Create.Success", String.class)
   ,   COMMANDS_GROUP_CREATE_ERROR                         ("Commands.Group.Create.Error")
-  ,   COMMANDS_GROUP_CREATE_ERROR_INTERVAL                ("Commands.Group.Create.Error.Interval")
   ,   COMMANDS_GROUP_LIST                                 ("Commands.Group.List")
   ,   COMMANDS_GROUP_LIST_STRINGNOTFOUND                  ("Commands.Group.List.stringNotFound", String.class)
   ,   COMMANDS_GROUP_REMOVE                               ("Commands.Group.Remove")
@@ -58,11 +56,9 @@ public enum Translator {
   ,   COMMANDS_TIPS_RAW_TEXTFORMAT                        ("Commands.Tips.Raw.textFormat")
   ,   COMMANDS_TIPS_GROUP_ADD_EXAMPLE                     ("Commands.Tips.Group.Add.Example")
   ,   COMMANDS_TIPS_GROUP_CREATE_GROUPNAME                ("Commands.Tips.Group.Create.Groupname")
-  ,   COMMANDS_TIPS_GROUP_CREATE_INTERVAL                 ("Commands.Tips.Group.Create.Interval")
   ,   COMMANDS_TIPS_GROUP_CREATE_RANDOM                   ("Commands.Tips.Group.Create.Random")
 
   ,   ARGUMENTS_TIPS_GROUP                                ("Arguments.Tips.Group")
-  ,   ARGUMENTS_TIPS_MESSAGE                              ("Arguments.Tips.Message")
 
   ,   GROUPMANAGER_LOADING_GROUPS                         ("GroupManager.Loading.Groups")
   ,   GROUPMANAGER_LOADING_NOGROUPSFOUND                  ("GroupManager.Loading.noGroupsFound")
