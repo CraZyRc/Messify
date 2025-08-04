@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: PlaceholderAPI
+    about: 'Information about PlaceholderAPI'
+    url: 'https://www.spigotmc.org/resources/placeholderapi.6245'
+  - name: Rollercraft Discord
+    about: 'Ask questions in the Dev section'
+    url: 'https://discord.gg/RNhtzvsBGP'
