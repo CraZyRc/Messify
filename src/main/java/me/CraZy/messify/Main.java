@@ -51,7 +51,7 @@ public final class Main extends JavaPlugin {
 
     this.getServer().getPluginManager().registerEvents(Listeners.getInstance(), this);
 
-    //new Updater(this, 0);
+    new Updater(this, 127703);
     Logger.success("Done! V" + getDescription().getVersion());
   }
 
